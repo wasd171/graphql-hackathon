@@ -95,6 +95,7 @@ class App extends Component {
   render() {
     return (
       <Container>
+        <h3>SSL is not supported due to API being HTTP-only</h3>
         {this.props.loading ? this.renderLoader() : this.renderChart()}
         <Wrapper>
           <MadeWithLove
