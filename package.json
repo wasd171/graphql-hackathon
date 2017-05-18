@@ -6,6 +6,7 @@
     "react": "^15.5.4",
     "react-apollo": "^1.2.0",
     "react-dom": "^15.5.4",
+    "react-made-with-love": "^1.0.1",
     "styled-components": "^1.4.6",
     "victory": "^0.19.1"
   },

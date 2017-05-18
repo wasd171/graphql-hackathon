@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components'
 import { graphql, gql } from 'react-apollo'
 import { VictoryChart, VictoryLine, VictoryLabel, VictoryLegend } from 'victory'
+import MadeWithLove from 'react-made-with-love'
 
 const Container = styled.div`
   height: 100vh;
@@ -9,6 +10,11 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+`;
+
+const Wrapper = styled.div`
+  padding: 10px;
 `;
 
 const query = gql`
@@ -87,11 +93,16 @@ class App extends Component {
   )
 
   render() {
-    console.log(this.props);
-
     return (
       <Container>
         {this.props.loading ? this.renderLoader() : this.renderChart()}
+        <Wrapper>
+          <MadeWithLove
+            by='wasd171'
+            emoji={true}
+            link='https://github.com/wasd171'
+          />
+        </Wrapper>
       </Container>
     );
   }
