@@ -3,7 +3,17 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import './index.css';
 
+import { ApolloClient, createNetworkInterface, ApolloProvider } from 'react-apollo';
+const networkInterface = createNetworkInterface({
+  uri: 'http://graphql.communitygraph.org/graphql/'
+});
+const client = new ApolloClient({
+  networkInterface: networkInterface
+});
+
 ReactDOM.render(
-  <App />,
+  <ApolloProvider client={client}>
+    <App />
+  </ApolloProvider>,
   document.getElementById('root')
 );
