@@ -4,7 +4,10 @@
   "private": true,
   "dependencies": {
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-apollo": "^1.2.0",
+    "react-dom": "^15.5.4",
+    "styled-components": "^1.4.6",
+    "victory": "^0.19.1"
   },
   "devDependencies": {
     "react-scripts": "0.9.5"
